@@ -18,7 +18,7 @@
          })();
        </script>
        <script>
-           function profilePush(){
+          
             clevertap.onUserLogin.push({
                     "Site": {
                     "Name": "Sumit Sharma",            // String
@@ -28,14 +28,15 @@
                     "Gender": "M",                     // Can be either M or F
                     "DOB": new Date(),                 // Date of Birth. Date object
                     // optional fields. controls whether the user will be sent email, push etc.
-                    "MSG-email": false,                // Disable email notifications
+                    "MSG-email": true,                // Disable email notifications
                     "MSG-push": true,                  // Enable push notifications
-                    "MSG-sms": false,                   // Enable sms notifications
-                    "MSG-whatsapp": false,             // Enable WhatsApp notification
+                    "MSG-sms": true,                   // Enable sms notifications
+                    "MSG-whatsapp": true,             // Enable WhatsApp notification
                 }
             })
+       
             window.alert("profile uploaded successfully")
-           }
+           
            function pushCTEvent(){
                 clevertap.event.push("WebEvent", {
                     "Action":"Success",
@@ -49,7 +50,7 @@
     </head>
     <body>
         <p>This page is having Clevertap SDK in-built</p>
-        <button type="button" name="Push Profile" onclick="profilePush()">Click here to Push a CT Profile</button><br><br>
+       <!-- <button type="button" name="Push Profile" onclick="profilePush()">Click here to Push a CT Profile</button><br><br>-->
         <button type="button" name="Push Event" onclick="pushCTEvent()">Click here to Push a CT Event</button>
         <p id="pushProfileText"></p>
     </body>
