@@ -2,7 +2,7 @@
 <html>
     <head>
         <title><h5>Welcome to my Demo Website with Clevertap SDK</h5></title>
-        <script type="text/javascript">
+        <!--<script type="text/javascript">
             var clevertap = {event:[], profile:[], account:[], onUserLogin:[], notifications:[], privacy:[]};
         // replace with the CLEVERTAP_ACCOUNT_ID with the actual ACCOUNT ID value from your Dashboard -> Settings page
        clevertap.account.push({"id": "W44-Z4K-K65Z"});
@@ -16,8 +16,8 @@
                 var s = document.getElementsByTagName('script')[0];
                 s.parentNode.insertBefore(wzrk, s);
          })();
-       </script>
-       <script>
+       </script>-->
+      <!-- <script>
            function loginFunction(){
             clevertap.onUserLogin.push({
                     "Site": {
@@ -65,13 +65,13 @@
            }
             
             //document.getElementById('demo').innerHTML = "Profile uploaded successfully";
-       </script> 
+       </script> -->
     </head>
     <body>
         <p>This page is having Clevertap SDK in-built</p>
-        <button type="button" name="Push Profile" onclick="loginFunction()">Login</button>
-        <button type="button" name="Push Event" onclick="pushCTEvent()">Click here to Push a CT Event</button>
-        <button type="button" name="Notification consent" onclick="ctNotificationConsent()">Web push consent</button>
-        <button type="button" name="updateProfile" onclick="updateProfile()">profile Update</button>
+        <button type="button" name="Push Profile" onclick="#">Login</button> <!--loginFunction()-->
+        <button type="button" name="Push Event" onclick="#">Click here to Push a CT Event</button> <!--pushCTEvent()-->
+        <button type="button" name="Notification consent" onclick="#">Web push consent</button><!--ctNotificationConsent()-->
+        <button type="button" name="updateProfile" onclick="#">profile Update</button><!--updateProfile()-->
     </body>
 </html>
