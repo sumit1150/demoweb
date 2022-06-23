@@ -86,6 +86,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 window.alert("Profile Uploaded");
                 
                 
+            function ctNotificationConsent(){
+            clevertap.notifications.push({
+                //"apnsWebPushId":"<apple web push id>", //only for safari browser
+                //"apnsWebPushServiceUrl":"<safari package service url>",//only for safari browser
+                "titleText":'Would you like to receive Push Notifications?',
+                "bodyText":'We promise to only send you relevant content and give you updates on your transactions',
+                "okButtonText":'Sign me up!',
+                "rejectButtonText":'No thanks',
+                "okButtonColor":'#f28046'});
+           }
+                
+                
             }
             
         </script>
@@ -99,7 +111,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p>This page is having Clevertap SDK in-built</p>
         <button type="button" name="Push Profile" onclick="gtmLoginFunction()">Login</button> <!--loginFunction()-->
         <button type="button" name="Push Event" onclick="#">Click here to Push a CT Event</button> <!--pushCTEvent()-->
-        <button type="button" name="Notification consent" onclick="#">Web push consent</button><!--ctNotificationConsent()-->
+        <button type="button" name="Notification consent" onclick="ctNotificationConsent()">Web push consent</button><!--ctNotificationConsent()-->
         <button type="button" name="updateProfile" onclick="#">profile Update</button><!--updateProfile()-->
     </body>
 </html>
